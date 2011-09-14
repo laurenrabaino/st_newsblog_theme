@@ -12,9 +12,8 @@
 				</div>
 
 				<div class="categoryTopper">
-					<h5>Home</h5>
 					<div class="catRSS"><a href="../../category/local-news/feed"><img src="http://seattletimes.nwsource.com/art/ui/1024/rss.gif"></a></div>
-					<p>Welcome to our new home for breaking news, local news, interesting links and exclusive video.</p>
+					<p>Welcome to our new home for breaking news, local news, interesting links and exclusive video. Here, we'll give you the best information from around the Puget Sound area.</p>
 				</div>
 
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

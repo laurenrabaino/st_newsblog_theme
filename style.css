@@ -50,7 +50,7 @@ img.alignleft, img.alignright, img.aligncenter {
 	clear: both;
 	font-weight: bold;
 }
-.hentry ul li, #content-main ul li { list-style-type:disc; }
+.hentry ul, .hentry ul li, #content-main ul li { list-style-type:disc; margin:3px 15px; }
 .hentry ol li, #content-main ol li { list-style-type:decimal; margin-left:15px }
 .wp-caption-text { font-size:90%; }
 
@@ -180,7 +180,7 @@ a.commentCount{
 
 /* Social media sharing */
 #content-main .addthis_toolbox ul, .addthis_toolbox ul { margin:0; }
-.addthis_toolbox ul li { float:left; margin:0 3px; list-style-type:none!important; }
+.addthis_toolbox ul li { float:left; margin:0 3px 0px!important; list-style-type:none!important; }
 .addthis_toolbox a { text-decoration:none; }
 .addthis_toolbox { margin-top:20px; }
 .sharing-left { float:left; width:400px; }
