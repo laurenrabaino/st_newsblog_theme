@@ -26,19 +26,22 @@
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 
 					<div class="entry-meta">
-						<?php twentyten_posted_on(); ?> at <?php the_time() ?> <span class="pipe">|</span> <a href="<?php the_permalink() ?>"><?php fb_comment_count() ?> comments</a>
+						<?php twentyten_posted_on(); ?> at <?php the_time() ?> <a href="<?php the_permalink() ?>"><?php fb_comment_count() ?> comments</a>
 					</div><!-- .entry-meta -->
 
 					<div class="entry-content">
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
 					</div><!-- .entry-content -->
+
+
+
 					<div class="entry-utility">
 						<?php twentyten_posted_in(); ?>
 						<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-utility -->
 				</div><!-- #post-## -->
-				<?php echo do_shortcode('[fbcomments]'); ?>
+
 				<div id="nav-below" class="navigation">
 					<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'twentyten' ) . '</span> %title' ); ?></div>
 					<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '</span>' ); ?></div>

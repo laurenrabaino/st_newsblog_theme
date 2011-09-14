@@ -139,7 +139,7 @@
 			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
 			<div class="entry-meta">
-				Posted by <?php the_author_posts_link() ?>
+				by <?php the_author_posts_link() ?>
 			</div><!-- .entry-meta -->
 
 	<?php if ( is_search() ) : // Only display excerpts for archives and search. ?>
@@ -164,10 +164,10 @@
 					$tags_list = get_the_tag_list( '', ', ' );
 					if ( $tags_list ):
 				?>
-					<!--<span class="tag-links">
+					<span class="tag-links">
 						<?php printf( __( '<span class="%1$s">Tagged</span> %2$s', 'twentyten' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
 					</span>
-					<span class="meta-sep">|</span>-->
+					<span class="meta-sep">|</span>
 				<?php endif; ?>
 				<span class="comments-link"><!--<?php comments_popup_link( __( 'Leave a comment', 'twentyten' ), __( '1 Comment', 'twentyten' ), __( '% Comments', 'twentyten' ) ); ?>--><a href="<?php the_permalink() ?>#comments"><img src="http://seattletimes.nwsource.com/art/ui/1024/v_2011/icons/comments.gif" class="commentIcon"> <?php fb_comment_count() ?> comments</a></span>
 				<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
@@ -183,7 +183,7 @@
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
 				<div id="nav-below" class="navigation">
-					<div class="previous-posts"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentyten' ) ); ?></div>
-					<div class="next-posts"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?></div>
+					<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentyten' ) ); ?></div>
+					<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?></div>
 				</div><!-- #nav-below -->
 <?php endif; ?>

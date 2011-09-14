@@ -1,58 +1,67 @@
-<?php
-/**
- * The template for displaying Author Archive pages.
- *
- * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
- */
+<?php get_header(); ?>
 
-get_header(); ?>
-			<div id="content" role="main">
+			<div id="leftcolumn" class="clearfix">
 
-<?php
-	/* Queue the first post, that way we know who
-	 * the author is when we try to get their name,
-	 * URL, description, avatar, etc.
-	 *
-	 * We reset this later so we can run the loop
-	 * properly with a call to rewind_posts().
-	 */
-	if ( have_posts() )
-		the_post();
-?>
+				<div id="blogNameMasthead">
+					<h2><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
+					<p class="tagline"><?php bloginfo( 'description' ); ?></p>
+					<div id="access" class="blogNav clearfix" role="navigation">
+						<?php wp_nav_menu( array( 'theme_location' => 'blog-nav' ) ); ?>
+					</div>
+					<div style="clear:both;"></div>
+				</div>
 
-				<h1 class="page-title author"><?php printf( __( 'Author Archives: %s', 'twentyten' ), "<span class='vcard'><a class='url fn n' href='" . get_author_posts_url( get_the_author_meta( 'ID' ) ) . "' title='" . esc_attr( get_the_author() ) . "' rel='me'>" . get_the_author() . "</a></span>" ); ?></h1>
+				<div class="categoryTopper">
 
-<?php
-// If a user has filled out their description, show a bio on their entries.
-if ( get_the_author_meta( 'description' ) ) : ?>
-					<div id="entry-author-info">
-						<div id="author-avatar">
-							<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentyten_author_bio_avatar_size', 60 ) ); ?>
-						</div><!-- #author-avatar -->
-						<div id="author-description">
-							<h2><?php printf( __( 'About %s', 'twentyten' ), get_the_author() ); ?></h2>
-							<?php the_author_meta( 'description' ); ?>
-						</div><!-- #author-description	-->
-					</div><!-- #entry-author-info -->
-<?php endif; ?>
+					<h5> Author Name</h5>
+					<div class="catRSS"><a href="../../category/<?php
+					echo $category[0]->slug;
+					?>/feed"><img src="http://seattletimes.nwsource.com/art/ui/1024/rss.gif"></a></div>
+					Author description.
+				</div>
 
-<?php
-	/* Since we called the_post() above, we need to
-	 * rewind the loop back to the beginning that way
-	 * we can run the loop properly, in full.
-	 */
-	rewind_posts();
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	/* Run the loop for the author archive page to output the authors posts
-	 * If you want to overload this in a child theme then include a file
-	 * called loop-author.php and that will be used instead.
-	 */
-	 get_template_part( 'loop', 'author' );
-?>
-			</div><!-- #content -->
-		</div><!-- #container -->
+				<div class="hentry">
 
-<?php get_sidebar(); ?>
+					<h5 class="hed6"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
+					<p class="entry-meta">Posted by <?php the_author(''); ?> on <?php the_time('F j, Y'); ?> at <?php the_time('g:i a'); ?></p>
+
+					<?php the_content(); ?>
+
+					<p class="entry-utility"><?php the_time('F j, Y'); ?> at <?php the_time('g:i a'); ?> | <?php the_category(', '); ?><!-- | <?php comments_number('0 comments', '1 comment', '% comments'); ?> --></p>
+
+				</div>
+
+				<?php endwhile; else: ?>
+
+				<h2 class="hed6">Page not found</h2>
+
+				<p>Sorry, but nothing was found here.</p>
+
+				<p>Here are some things you can do:</p>
+
+				<p>1) Go back to the <a href="<?php echo home_url(); ?>">homepage</a>.</p>
+
+				<p>2) Do a search</p>
+				<form role="search" method="get" id="searchform" action="<?php echo home_url(); ?>">
+					<div>
+						<label class="screen-reader-text" for="s">Search for:</label>
+						<input type="text" value="" name="s" id="s">
+						<input type="submit" id="searchsubmit" value="Search">
+					</div>
+				</form>
+
+				<?php endif; ?>
+
+				<p><?php posts_nav_link(); ?></p>
+
+			</div>
+
+			<div id="rightcolumn" class="clearfix">
+
+				<?php get_sidebar(); ?>
+
+			</div>
+
 <?php get_footer(); ?>

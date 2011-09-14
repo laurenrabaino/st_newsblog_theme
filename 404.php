@@ -1,30 +1,36 @@
-<?php
-/**
- * The template for displaying 404 pages (Not Found).
- *
- * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
- */
+<?php get_header(); ?> 
 
-get_header(); ?>
+			<div id="leftcolumn" class="clearfix">
+				
+				<p>Sorry, but nothing was found here.</p>
+				
+				<p>Here are some things you can do:</p>
+				
+				<p>1) Go back to the <a href="<?php echo home_url(); ?>">homepage</a>.</p>
+				
+				<p>2) Do a search</p>
+				<form role="search" method="get" id="searchform" action="<?php echo home_url(); ?>">
+					<div>
+						<label class="screen-reader-text" for="s">Search for:</label>
+						<input type="text" value="" name="s" id="s">
+						<input type="submit" id="searchsubmit" value="Search">
+					</div>
+				</form>
+				
+				<p>3) Check out some recent news stories:</p>
+				<?php query_posts('showposts=15'); ?>
+				<?php while (have_posts()) : the_post(); ?>
+				<ul>
+				<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+				</ul>
+				<?php endwhile;?>
 
-	<div id="container">
-		<div id="content" role="main">
-
-			<div id="post-0" class="post error404 not-found">
-				<h1 class="entry-title"><?php _e( 'Not Found', 'twentyten' ); ?></h1>
-				<div class="entry-content">
-					<p><?php _e( 'Apologies, but the page you requested could not be found. Perhaps searching will help.', 'twentyten' ); ?></p>
-					<?php get_search_form(); ?>
-				</div><!-- .entry-content -->
-			</div><!-- #post-0 -->
-
-		</div><!-- #content -->
-	</div><!-- #container -->
-	<script type="text/javascript">
-		// focus on search field after it has loaded
-		document.getElementById('s') && document.getElementById('s').focus();
-	</script>
+			</div>
+			
+			<div id="rightcolumn" class="clearfix">
+			
+				<?php get_sidebar(); ?>
+				
+			</div>
 
 <?php get_footer(); ?>
