@@ -30,22 +30,28 @@
 						<div class="addthis_toolbox">
 							<ul class="addthis_share clearfix">
 								<li><span>Share:</span></li>
-								<li><a class="addthis_button_twitter">&nbsp;</a></li>
-								<li><a class="addthis_button_facebook">&nbsp;</a></li>
-								<li><a class="addthis_button_linkedin">&nbsp;</a></li>
+								<li><a class="addthis_button_stumbleupon">&nbsp;</a></li>
+								<li><a class="addthis_button_delicious">&nbsp;</a></li>
+								<li><a class="addthis_button_reddit">&nbsp;</a></li>
+								<li><a class="addthis_button_digg">&nbsp;</a></li>
 								<li><a class="addthis_button_email">&nbsp;</a></li>
 								<li><a class="addthis_button_expanded">&nbsp;</a></li>
-								<!--<li><a class="addthis_button_google_plusone last">&nbsp;</a></li>-->
+								<!-- END ADDTHIS -->
+								<li class="fb-count"><div id="fb-root"></div>
+								<script>(function(d, s, id) {
+								  var js, fjs = d.getElementsByTagName(s)[0];
+								  if (d.getElementById(id)) {return;}
+								  js = d.createElement(s); js.id = id;
+								  js.src = "//connect.facebook.net/en_US/all.js#appId=279558868722586&xfbml=1";
+								  fjs.parentNode.insertBefore(js, fjs);
+								}(document, 'script', 'facebook-jssdk'));</script>
+								<div class="fb-like" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false" data-action="recommend"></div></li>
+								<li class="tweet-count"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-url="<?php the_permalink() ?>" data-text="<?php the_title(); ?>" data-via="seattletimes">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
+								<li class="linkedin-count"><script src="http://platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/Share" data-counter="right"></script></li>
+								<li class="gplus-count"><g:plusone size="medium"></g:plusone></li>
 							</ul>
 						</div>
 						<div style="clear:both; float:none;"></div>
-						<!-- END ADDTHIS -->
-					</div>
-
-					<div class="sharing-right clearfix">
-						<div class="fb-count"><iframe src="//www.facebook.com/plugins/like.php?app_id=169588046452521&amp;href&amp;send=false&amp;layout=box_count&amp;width=50&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=90" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:90px;" allowTransparency="true"></iframe></div>
-						<div class="tweet-count"><a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="<?php the_permalink() ?>" data-text="<?php the_title(); ?>" data-via="seattletimes">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div>
-						<div class="gplus-count"><g:plusone size="tall"></g:plusone></div>
 					</div>
 
 					<div class="clear"></div>

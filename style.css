@@ -14,7 +14,7 @@ For use by The Seattle Times.
 p { line-height: 1.5em; margin: 10px 0; }
 blockquote {
 	font-style: italic;
-	margin: 20px 30px;
+	margin: 0px 30px;
 	font-size: 1em;
 	font-family: Arial, sans-serif;
 	background-image:none;
@@ -50,8 +50,8 @@ img.alignleft, img.alignright, img.aligncenter {
 	clear: both;
 	font-weight: bold;
 }
-.hentry ul, .hentry ul li, #content-main ul li { list-style-type:disc; margin:3px 15px; }
-.hentry ol li, #content-main ol li { list-style-type:decimal; margin-left:15px }
+.hentry ul li, #content-main ul li { list-style-type:disc; margin:3px 20px; }
+.hentry ol li, #content-main ol li { list-style-type:decimal; margin:3px 20px; }
 .wp-caption-text { font-size:90%; }
 
 /* Blog name */
@@ -183,14 +183,33 @@ a.commentCount{
 .addthis_toolbox ul li { float:left; margin:0 3px 0px!important; list-style-type:none!important; }
 .addthis_toolbox a { text-decoration:none; }
 .addthis_toolbox { margin-top:20px; }
-.sharing-left { float:left; width:400px; }
-.sharing-right { float:right; width:200px; }
+.sharing-left {  }
+.sharing-left .fb-count, .sharing-left .tweet-count, .sharing-left .gplus-count, .sharing-left .linkedin-count  { float:left; }
+#content-main .sharing-left ul li.tweet-count {  }
+#content-main .sharing-left ul li.linkedin-count {  }
+#content-main .sharing-left ul li.fb-count { width:125px; padding-left:15px; }
+#content-main .sharing-left ul li.gplus-count { width:75px; padding-left:10px; }
+.sharing-right { float:right; width:220px; margin-top:30px; }
 .sharing-right .fb-count, .sharing-right .tweet-count, .sharing-right .gplus-count  { float:left; }
-.sharing-right .fb-count { margin-top:2px; }
-.sharing-right .gplus-count { margin: 0 0 0 8px; }
+.sharing-right .fb-count { margin-top:1px; width:90px; overflow:hidden; }
+.sharing-right .gplus-count { margin: 1px 8px 0; }
 
 .nocomments { display:none; }
-
+.comments h3{ display:inline; margin: 0px 0px 30px!important;}
+.comments span a {
+	display:inline;
+	margin: 0px 0px 0px 20px;
+	font-weight:bold;
+	text-decoration:none;
+	color:#999;
+	background-image:url('http://seatimesteam.com/newsblog/wp-content/themes/newsblog_v2/whats_this.png');
+	padding-left:15px;
+	background-repeat:no-repeat;
+	background-position:left center;
+}
+.comments span a:hover {
+	
+}
 span.addthis_toolbox { position:relative; overflow:hidden; float:right; }
 span.addthis_toolbox a { float:left; margin:0 3px; }
 
