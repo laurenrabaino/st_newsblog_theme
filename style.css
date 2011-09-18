@@ -80,11 +80,11 @@ img.alignleft, img.alignright, img.aligncenter {
 	float: left;
 	position: relative;
 	margin: 0px 3px;
-	line-height: 2em;
+	line-height: 1.8em;
 }
 .ie8 #access li { padding: 6px 10px; }
 #access a, .cat-links a {
-	line-height: 1em;
+	/*line-height: 1em;*/
 	font-family: Arial, sans-serif;
 	font-size: 90% /* 11px */;
 	color: #333 !important;
@@ -111,16 +111,16 @@ img.alignleft, img.alignright, img.aligncenter {
 	border-bottom: 1px solid white;
 }
 #access li#menu-item-399 a{
-	background-image:url('http://newsblog.seattletimes.com/wp-content/themes/newsblog/images/home_inactive.png');
+	background-image:url('http://newsblog.seattletimes.com/wp-content/themes/newsblog_v2/images/home_icon.jpg');
 	background-repeat:no-repeat;
-	background-position:center;
+	background-position:4px -16px;
 }
 #access li#menu-item-399:hover a, #access li#menu-item-399.current_page_item a {
-	background-image:url('http://newsblog.seattletimes.com/wp-content/themes/newsblog/images/home_icon.png')!Important;
+	background-image:url('http://newsblog.seattletimes.com/wp-content/themes/newsblog_v2/images/home_icon.jpg')!Important;
 	background-repeat:no-repeat!important;
-	background-position:center!important;
 	text-decoration:none;
 	border-bottom:1px solid #fff;
+	background-position:4px 2px!important;
 }
 
 /* Category topper (description) */
