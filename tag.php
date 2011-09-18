@@ -12,12 +12,11 @@
 				</div>
 
 				<div class="categoryTopper">
-
-					<!--h5><?php if(is_category()) { single_cat_title(); } ?></h5>-->
+					<h5>Tag archives</h5>
 					<div class="catRSS"><a href="../../category/<?php
 					echo $category[0]->slug;
 					?>/feed"><img src="http://seattletimes.nwsource.com/art/ui/1024/rss.gif"></a></div>
-					<p><?php single_tag_title('Currently browsing posts tagged: '); ?></p>
+					<p>You are currently browsing posts tagged <strong><?php single_tag_title(''); ?></strong>.</p>
 				</div>
 
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
