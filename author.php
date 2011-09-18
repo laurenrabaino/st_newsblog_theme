@@ -16,9 +16,7 @@
    						 $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
    					 ?>
 					<h5>Author archives</h5>
-					<div class="catRSS"><a href="../../category/<?php
-					echo $category[0]->slug;
-					?>/feed"><img src="http://seattletimes.nwsource.com/art/ui/1024/rss.gif"></a></div>
+					<div class="catRSS"><a href="../../author/<?php echo $curauth->nickname; ?>/feed"><img src="http://seattletimes.nwsource.com/art/ui/1024/rss.gif"></a></div>
 					<p>You are currently viewing all posts written by <strong><?php echo $curauth->display_name; ?></strong>. <?php echo $curauth->user_description; ?></p>
 				</div>
 
