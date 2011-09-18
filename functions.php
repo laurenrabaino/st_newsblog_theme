@@ -30,7 +30,7 @@ if ( function_exists('register_sidebar') )
         'after_title' => '</h4>',
     ));
 
-/*Seattle Times photo gallery*/
+/*Seattle Times photo gallery popup shortcode*/
 function myUrl($atts, $content = null) {
     extract(shortcode_atts(array(
         "gallery" => 'http://'
