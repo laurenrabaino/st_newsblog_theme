@@ -12,25 +12,14 @@
 				</div>
 
 				<div class="categoryTopper">
-
-					<h5> Author Name</h5>
+					<?php
+   						 $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+   					 ?>
+					<h5>Author archives</h5>
 					<div class="catRSS"><a href="../../category/<?php
 					echo $category[0]->slug;
 					?>/feed"><img src="http://seattletimes.nwsource.com/art/ui/1024/rss.gif"></a></div>
-					Author description.
-				</div>
-
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-				<div class="hentry">
-
-					<h5 class="hed6"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
-					<p class="entry-meta">Posted by <?php the_author(''); ?> on <?php the_time('F j, Y'); ?> at <?php the_time('g:i a'); ?></p>
-
-					<?php the_content(); ?>
-
-					<p class="entry-utility"><?php the_time('F j, Y'); ?> at <?php the_time('g:i a'); ?> | <?php the_category(', '); ?><!-- | <?php comments_number('0 comments', '1 comment', '% comments'); ?> --></p>
-
+					<p>You are currently viewing all posts written by <strong><?php echo $curauth->display_name; ?></strong>. <?php echo $curauth->user_description; ?></p>
 				</div>
 
 				<?php endwhile; else: ?>
