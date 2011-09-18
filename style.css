@@ -113,14 +113,15 @@ img.alignleft, img.alignright, img.aligncenter {
 #access li#menu-item-399 a{
 	background-image:url('http://newsblog.seattletimes.com/wp-content/themes/newsblog_v2/images/home_icon.jpg');
 	background-repeat:no-repeat;
-	background-position:4px -16px;
+	background-position:4px -20px;
 }
 #access li#menu-item-399:hover a, #access li#menu-item-399.current_page_item a {
 	background-image:url('http://newsblog.seattletimes.com/wp-content/themes/newsblog_v2/images/home_icon.jpg')!Important;
 	background-repeat:no-repeat!important;
 	text-decoration:none;
 	border-bottom:1px solid #fff;
-	background-position:4px 2px!important;
+	background-position:4px 3px!important;
+	background-color:#fff;
 }
 
 /* Category topper (description) */
