@@ -20,7 +20,6 @@
 					<?php the_content(); ?>
 					
 					<div class="sharing-left clearfix">
-						<p><?php the_time('F j, Y'); ?> at <?php the_time('g:i a'); ?> | <?php the_category(', '); ?></p>
 						<!-- ADDTHIS SOCIAL MEDIA SHARING --> 
 						<div class="addthis_toolbox"> 
 							<ul class="addthis_share clearfix"> 
