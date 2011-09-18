@@ -198,20 +198,21 @@ a.commentCount{
 .comments h3{ display:inline; margin: 0px 0px 30px!important;}
 .comments span a {
 	display:inline;
-	margin: 0px 0px 0px 20px;
+	margin: 0px 0px 20px 20px;
 	font-weight:bold;
 	text-decoration:none;
 	color:#999;
-	background-image:url('http://seatimesteam.com/newsblog/wp-content/themes/newsblog_v2/whats_this.png');
+	background-image:url('/wp-content/themes/newsblog_v2/whats_this.png');
 	padding-left:15px;
 	background-repeat:no-repeat;
 	background-position:left center;
 }
 .comments span a:hover {
-	
+	text-decoration:underline;
 }
 span.addthis_toolbox { position:relative; overflow:hidden; float:right; }
 span.addthis_toolbox a { float:left; margin:0 3px; }
+div#fb-root {margin:20px 0px 0px;}
 
 /*sidebar labels & headers */
 /* lists in the sidebar */

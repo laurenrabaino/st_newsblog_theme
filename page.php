@@ -43,10 +43,13 @@
 					</div>
 					
 					<div class="clear"></div>
-					
-					<h3>Comments</h3> <a href="/what-are-facebook-comments-anyway" title="What are Facebook comments?">What is this?</a>
-					<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="<?php the_permalink() ?>" num_posts="5" width="630"></fb:comments>
-				
+					<div class="comments">
+						<h3>Comments</h3> 
+						<span>
+							<a href="/what-are-facebook-comments-anyway" title="What are Facebook comments?">What is this?</a>
+						</span>
+						<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="<?php the_permalink() ?>" num_posts="5" width="630"></fb:comments>
+					</div>
 				</div>
 				
 				<?php endwhile; else: ?>  
