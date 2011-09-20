@@ -224,11 +224,9 @@ div#fb-root {margin:20px 0px 0px;}
 /*sidebar labels & headers */
 /* lists in the sidebar */
 #rightcolumn ul {
-	border-top: 1px solid #C7C7C7;
 	padding: 0 0 0 5px;
 }
 #rightcolumn ul li {
-	border-bottom: 1px solid #C7C7C7;
 	padding: 5px 0px;
 	margin: 0px;
 }
