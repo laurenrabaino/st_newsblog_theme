@@ -52,10 +52,10 @@ img.alignleft, img.alignright, img.aligncenter {
 }
 .hentry ul li, #content-main ul li { list-style-type:disc; margin:3px 20px; }
 .hentry ol li, #content-main ol li { list-style-type:decimal; margin:3px 20px; }
-.wp-caption-text { font-size:90%; }
+.wp-caption-text { font-size:90%; margin:5px 0px; }
 
 /* Blog name */
-#blogNameMasthead h2 { font-size: 2.1em; line-height:1em; }
+#blogNameMasthead h2 { font-size: 2.1em; line-height:1em; text-indent:-2000px; }
 #blogNameMasthead h2 a {
 	color: black;
 	margin: 5px 0 5px 0px;
@@ -63,9 +63,13 @@ img.alignleft, img.alignright, img.aligncenter {
 	font-family: Georgia, times, serif;
 	font-weight: normal;
 	text-decoration:none;
+	background-image:url('/wp-content/themes/newsblog_v2/images/today_file_full.jpg');
+	background-repeat:no-repeat;
+	background-position:relative;
 }
 #blogNameMasthead h2 a:hover {
 	text-decoration:underline;
+	background-position:0px -27px;
 }
 .tagline { margin: 0 0 15px; color:#666; }
 
@@ -138,7 +142,8 @@ img.alignleft, img.alignright, img.aligncenter {
 	margin: 0 0 15px;
 	padding-right:20px;
 }
-.categoryTopper .catRSS { position:absolute; right:0; top:5px; width: 15px; height: 12px; }
+.categoryTopper .catRSS { position:absolute; right:0; top:5px; width: 80px; height: 12px; }
+.categoryTopper .catRSS img {margin-right:3px;}
 .categoryTopper h5 { margin:0 0 3px; font-weight:bold; }
 
 /* headline entries */
