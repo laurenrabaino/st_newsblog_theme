@@ -16,7 +16,7 @@
 				<h5 class="hed6"><?php the_title(); ?></h5>
 
 					<div class="entry-meta">
-						Posted by <?php the_author_posts_link() ?> on <?php the_time('F jS, Y') ?> at <?php the_time('g:i a'); ?>
+						Posted by <?php the_author_posts_link() ?> on <?php the_time('F j, Y') ?> at <?php the_time('g:i A'); ?>
 					</div>
 
 				<div id="content-main">
@@ -56,13 +56,9 @@
 
 					<div class="clear"></div>
 
-					<div class="comments">
-						<h3>Comments</h3> 
-						<span>
-							<a href="/what-are-facebook-comments-anyway" title="What are Facebook comments?">What is this?</a>
-						</span>
-						<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="<?php the_permalink() ?>" num_posts="5" width="630"></fb:comments>
-					</div>
+					<h3>Comments</h3>
+					<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="<?php the_permalink() ?>" num_posts="5" width="630"></fb:comments>
+
 				</div>
 
 				<?php endwhile; else: ?>

@@ -28,7 +28,7 @@
 				<div class="hentry">
 
 					<h5 class="hed6"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
-					<p class="entry-meta">Posted by <?php the_author(''); ?> on <?php the_time('F j, Y'); ?> at <?php the_time('g:i a'); ?></p>
+					<p class="entry-meta">Posted by <?php the_author(''); ?> on <?php the_time('F j, Y') ?> at <?php the_time('g:i A'); ?></p>
 
 					<?php the_content(); ?>
 
