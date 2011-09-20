@@ -79,12 +79,12 @@ img.alignleft, img.alignright, img.aligncenter {
 #access li, div.menu li {
 	float: left;
 	position: relative;
-	margin: 0px 3px;
-	line-height: 1.8em;
+	margin: 0px 3px 0px 3px!Important;
+	line-height: 2em;
 }
-.ie8 #access li { padding: 6px 10px; }
+.ie8 #access li { padding: 6px 0px; }
 #access a, .cat-links a {
-	/*line-height: 1em;*/
+	line-height: 1em!important;
 	font-family: Arial, sans-serif;
 	font-size: 90% /* 11px */;
 	color: #333 !important;
@@ -96,7 +96,7 @@ img.alignleft, img.alignright, img.aligncenter {
 	border-right: 1px solid #CCC;
 	border-left: 1px solid #CCC;
 	border-top: 1px solid #CCC;
-	margin: 0px 0px;
+	margin: 0px 0px!important;
 	padding: 5px 10px;
 }
 #access a:hover {
