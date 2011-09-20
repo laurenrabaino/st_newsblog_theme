@@ -227,7 +227,7 @@ div#fb-root {margin:20px 0px 0px;}
 	padding: 0 0 0 5px;
 }
 #rightcolumn ul li {
-	padding: 5px 0px;
+	padding: 2px 0px;
 	margin: 0px;
 }
 #rightcolumn ul li a {
@@ -237,4 +237,8 @@ div#fb-root {margin:20px 0px 0px;}
 #rightcolumn ul li a:hover {
 	text-decoration:underline;
 	color:#09334B;
+}
+
+.textwidget {
+	margin-top:25px;
 }
