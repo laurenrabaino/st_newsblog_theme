@@ -141,6 +141,7 @@ img.alignleft, img.alignright, img.aligncenter {
 	font-family: Georgia, times, serif !important;
 	margin: 0 0 15px;
 	padding-right:20px;
+	width: 82%;
 }
 .categoryTopper .catRSS { position:absolute; right:0; top:5px; width: 80px; height: 12px; }
 .categoryTopper .catRSS img {margin-right:3px;}
