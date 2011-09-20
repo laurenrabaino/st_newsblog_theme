@@ -13,9 +13,7 @@
 
 				<div class="categoryTopper">
 					<h5>Tag archives</h5>
-					<div class="catRSS"><a href="../../category/<?php
-					echo $category[0]->slug;
-					?>/feed"><img src="http://seattletimes.nwsource.com/art/ui/1024/rss.gif"></a></div>
+					<div class="catRSS"><a href="feed"><img src="http://seattletimes.nwsource.com/art/ui/1024/rss.gif">Subscribe</a></div>
 					<p>You are currently browsing posts tagged <strong><?php single_tag_title(''); ?></strong>.</p>
 				</div>
 
