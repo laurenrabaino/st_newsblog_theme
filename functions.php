@@ -54,4 +54,13 @@ function catch_that_image() {
   return $first_img;
 }
 
+/*add external links to wysiwyg*/
+function custom_mce_styles( $init ) {
+    $init['theme_advanced_buttons2_add_before'] = 'styleselect';
+    $init['theme_advanced_styles'] = 'External Style=external';
+    return $init;
+}
+
+add_filter( 'tiny_mce_before_init', 'custom_mce_styles'  )
+
 ?>
