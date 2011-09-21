@@ -52,7 +52,7 @@ img.alignleft, img.alignright, img.aligncenter {
 }
 .hentry ul li, #content-main ul li { list-style-type:disc; margin:3px 20px; }
 .hentry ol li, #content-main ol li { list-style-type:decimal; margin:3px 20px; }
-.wp-caption-text { font-size:90%; margin:5px 0px; }
+.wp-caption-text { font-size:90%; margin:0px 3px 15px 0px;}
 
 /* Blog name */
 #blogNameMasthead h2 { font-size: 2.1em; line-height:1em; text-indent:-2000px; }
@@ -138,11 +138,17 @@ img.alignleft, img.alignright, img.aligncenter {
 .categoryTopper p {
 	clear: both;
 	color: #333;
-	margin: 0 0 15px;
+	/*margin: 0 0 15px;*/
+	margin:0px;
 	padding-right:20px;
 	width: 82%;
 }
-.categoryTopper .catRSS { position:absolute; right:0; top:5px; width: 80px; height: 12px; }
+.categoryTopper .catRSS {
+	/*position:absolute; right:0; top:5px;*/
+	width: 80px;
+	height: 12px;
+	margin:3px 0px 15px;
+}
 .categoryTopper .catRSS img {margin-right:3px;}
 .categoryTopper h5 { margin:0 0 3px; font-weight:bold; }
 
@@ -223,7 +229,7 @@ div#fb-root {margin:20px 0px 0px;}
 /*sidebar labels & headers */
 /* lists in the sidebar */
 #rightcolumn ul {
-	padding: 0 0 0 5px;
+	padding: 0;
 }
 #rightcolumn ul li {
 	padding: 2px 0px;

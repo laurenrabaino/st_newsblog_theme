@@ -4,7 +4,6 @@
 
 
 <head profile="http://gmpg.org/xfn/11">
-
 	<?php // get page title and strip out spaces
 	$strTitle = trim(wp_title("",false));
 	?>
@@ -53,7 +52,7 @@
 		templates: { twitter: '<?php echo $strTitle; ?> {{url}} via @seattletimes'  }
 	}
 	</script>
-	<!-- AddThis widget code -->
+	<!--  End AddThis widget code -->
 	<!-- Facebook -->
 	<meta property="og:title" content="<?php if (is_home()): echo get_bloginfo('name'); else: echo $strTitle;; endif; ?>"/>
 	<meta property="og:type" content="article"/>
@@ -96,7 +95,7 @@
 	<script type="text/javascript">
 	<!--
 	//modify for specific page info
-	OAS_sitepage = 'www.seattletimes.com/local/theblotter/blog/index.html';
+	OAS_sitepage = 'www.seattletimes.com/local/thetodayfile/blog/index.html';
 	OAS_query = encodeURI(document.location.search);
 	OAS_listpos = 'Position1,TopRight,Right,Right1,Right2,Position3,Top1,Middle3,Top,Top3';
 	//-->

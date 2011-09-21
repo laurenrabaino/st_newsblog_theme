@@ -14,13 +14,13 @@
 				<div class="categoryTopper">
 
 					<!--h5><?php if(is_category()) { single_cat_title(); } ?></h5>-->
-					<div class="catRSS"><a href="feed"><img src="http://seattletimes.nwsource.com/art/ui/1024/rss.gif">Subscribe</a></div>
 					<?php
 					$categorydesc = category_description();
 					if ( ! empty( $categorydesc ) ) {
 						echo apply_filters( 'archive_meta', '' . $categorydesc . '' );
 					}
 					?>
+					<div class="catRSS"><a href="feed"><img src="http://seattletimes.nwsource.com/art/ui/1024/rss.gif">Subscribe</a></div>
 				</div>
 
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
