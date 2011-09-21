@@ -138,7 +138,6 @@ img.alignleft, img.alignright, img.aligncenter {
 .categoryTopper p {
 	clear: both;
 	color: #333;
-	font-family: Georgia, times, serif !important;
 	margin: 0 0 15px;
 	padding-right:20px;
 	width: 82%;
