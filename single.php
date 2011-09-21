@@ -24,7 +24,7 @@
 					<?php the_content(); ?>
 
 					<div class="sharing-left clearfix">
-						<p class="entry-utility">Posted in: <?php the_category(', '); ?></p>
+						<p class="entry-utility">Posted in: <?php exclude_post_categories('1',', '); ?></p>
 						<p><?php the_tags(); ?></p>
 						<!-- ADDTHIS SOCIAL MEDIA SHARING -->
 						<div class="addthis_toolbox">

@@ -29,7 +29,7 @@
 
 					<?php the_content(); ?>
 
-					<p class="entry-utility"><?php the_time('F j, Y'); ?> at <?php the_time('g:i a'); ?> | <?php the_category(', '); ?><!-- | <?php comments_number('0 comments', '1 comment', '% comments'); ?> --></p>
+					<p class="entry-utility"><?php the_time('F j, Y'); ?> at <?php the_time('g:i a'); ?> | <?php exclude_post_categories('1',', '); ?><!-- | <?php comments_number('0 comments', '1 comment', '% comments'); ?> --></p>
 
 				</div>
 

@@ -32,7 +32,7 @@
 
 					<?php the_content(); ?>
 
-					<p class="entry-utility"><span class="comments-link"><a href="<?php the_permalink() ?>#comments" class="commentCount"><?php fb_comment_count() ?> comments</a></span> | Posted in <?php the_category(', '); ?></p>
+					<p class="entry-utility"><span class="comments-link"><a href="<?php the_permalink() ?>#comments" class="commentCount"><?php fb_comment_count() ?> comments</a></span> | Posted in <?php exclude_post_categories('1',', '); ?></p>
 
 				</div>
 

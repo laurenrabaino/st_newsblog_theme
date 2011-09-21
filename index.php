@@ -12,8 +12,8 @@
 				</div>
 
 				<div class="categoryTopper">
-					<div class="catRSS"><a href="../../category/local-news/feed"><img src="http://seattletimes.nwsource.com/art/ui/1024/rss.gif"> Subscribe</a></div>
 					<p>Welcome to our new home for breaking news, local news, interesting links and exclusive video. Here, we'll give you the best information from around the Puget Sound area.</p>
+					<div class="catRSS"><a href="../../category/local-news/feed"><img src="http://seattletimes.nwsource.com/art/ui/1024/rss.gif"> Subscribe</a></div>
 				</div>
 
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -28,7 +28,7 @@
 
 				<?php the_content(); ?>
 
-					<p class="entry-utility"><span class="comments-link"><a href="<?php the_permalink() ?>#comments" class="commentCount"><?php fb_comment_count() ?> comments</a></span> | Posted in <?php the_category(', '); ?><!-- | <?php comments_number('0 comments', '1 comment', '% comments'); ?> --></p>
+					<p class="entry-utility"><span class="comments-link"><a href="<?php the_permalink() ?>#comments" class="commentCount"><?php fb_comment_count() ?> comments</a></span> | Posted in <?php exclude_post_categories('1',', '); ?><!-- | <?php comments_number('0 comments', '1 comment', '% comments'); ?> --></p>
 
 				</div>
 

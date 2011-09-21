@@ -53,14 +53,34 @@ function catch_that_image() {
   }
   return $first_img;
 }
-
-/*add external links to wysiwyg*/
+//Exclude uncategorized from showing up
+function exclude_post_categories($excl='', $spacer=' '){
+   $categories = get_the_category($post->ID);
+      if(!empty($categories)){
+      	$exclude=$excl;
+      	$exclude = explode(",", $exclude);
+		$thecount = count(get_the_category()) - count($exclude);
+      	foreach ($categories as $cat) {
+      		$html = '';
+      		if(!in_array($cat->cat_ID, $exclude)) {
+				$html .= '<a href="' . get_category_link($cat->cat_ID) . '" ';
+				$html .= 'title="' . $cat->cat_name . '">' . $cat->cat_name . '</a>';
+				if($thecount>1){
+					$html .= $spacer;
+				}
+			$thecount--;
+      		echo $html;
+      		}
+	      }
+      }
+}
+/*add external links to wysiwyg
 function custom_mce_styles( $init ) {
     $init['theme_advanced_buttons2_add_before'] = 'styleselect';
     $init['theme_advanced_styles'] = 'External Style=external';
     return $init;
 }
 
-add_filter( 'tiny_mce_before_init', 'custom_mce_styles'  )
+add_filter( 'tiny_mce_before_init', 'custom_mce_styles'  )*/
 
 ?>
