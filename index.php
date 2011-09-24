@@ -2,19 +2,22 @@
 
 			<div id="leftcolumn" class="clearfix">
 
-				<div id="blogNameMasthead">
+				<div id="blogNameMasthead" class="home">
 					<h2><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
 					<p class="tagline"><?php bloginfo( 'description' ); ?></p>
-					<div id="access" class="blogNav clearfix" role="navigation">
+					<p><!--this is temporary as a proof of concept. i will code it better when we decide where we want it
+<img src="http://seattletimes.nwsource.com/art/ui/1024/rss.gif" /> <a href="/feed/">Subscribe to this blog</a></li>&nbsp; | <img src="http://seattletimes.nwsource.com/art/ui/article_email.gif" /> <a href="mailto:newstips@seattletimes.com">Submit a news tip</a> -->
+</p>
+					<div id="access" class="blogNav clearfix home" role="navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'blog-nav' ) ); ?>
 					</div>
 					<div style="clear:both;"></div>
 				</div>
 
-				<div class="categoryTopper">
+				<!-- <div class="categoryTopper">
 					<p>Welcome to our new home for breaking news, local news, interesting links and exclusive video. Here, we'll give you the best information from around the Puget Sound area.</p>
 					<div class="catRSS"><a href="../../category/local-news/feed"><img src="http://seattletimes.nwsource.com/art/ui/1024/rss.gif"> Subscribe</a></div>
-				</div>
+				</div> -->
 
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 

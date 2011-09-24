@@ -45,7 +45,7 @@
 								  js.src = "//connect.facebook.net/en_US/all.js#appId=279558868722586&xfbml=1";
 								  fjs.parentNode.insertBefore(js, fjs);
 								}(document, 'script', 'facebook-jssdk'));</script>
-								<div class="fb-like" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false" data-action="recommend"></div></li>
+								<div class="fb-like" data-send="false" data-layout="button_count" data-width="125" data-show-faces="false" data-action="recommend"></div></li>
 								<li class="tweet-count"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-url="<?php the_permalink() ?>" data-text="<?php the_title(); ?>" data-via="seattletimes">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
 								<li class="linkedin-count"><script src="http://platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/Share" data-counter="right"></script></li>
 								<li class="gplus-count"><g:plusone size="medium"></g:plusone></li>
