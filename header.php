@@ -72,23 +72,50 @@
 	<!-- global javascript -->
 	<script type="text/javascript" src="http://seattletimes.nwsource.com/js/ST.js?v=1.1"></script>
 	<script type="text/javascript" src="http://seattletimes.nwsource.com/js/STS.js?v=1.0"></script>
-
+	<!-- start omniture -->
+	<script language="JavaScript" type="text/javascript" src="http://marketplace.nwsource.com/shared/js/s_code.js?v=1.0"></script>
+	<script language="JavaScript" type="text/javascript" src="http://marketplace.nwsource.com/shared/js/omniHelper.js?v=1.0"></script>
+	<script language="JavaScript" type="text/javascript"><!--
+		if ('function' == typeof window.omni_pageCode) { omni_pageCode(); }
+		try {var s_code=s.t();if(s_code)document.write(s_code)} catch(err){}//-->
+	</script>
+<!-- end omniture -->
 	<!-- omniture -->
 	<?php if (is_single()) { //for single article ?>
-	<meta name="t_omni_pagename" content="st|localnews|localblog|article" />
+	<meta name="t_omni_pagename" content="st|localnews|todayfile|article" />
 	<meta name="t_omni_pubdate" content="<?php the_time('m/d/Y h:i') ?>" />
 	<meta name="t_omni_articleid" content="<?php echo($post->post_name) ?>" />
 	<meta name="t_omni_site" content="st" />
 	<meta name="t_omni_pagetype" content="article" />
 	<meta name="t_omni_contenttitle" content="<?php single_post_title(''); ?>" />
-	<meta name="t_omni_path" content="st|localnews|localblog" />
+	<meta name="t_omni_path" content="st|localnews|todayfile" />
 	<meta name="t_omni_author" content="<?php the_author_firstname(); ?> <?php the_author_lastname(); ?>" />
-	<?php } else { //for other pages ?>
-	<meta name="t_omni_pagename" content="st|localnews|localblog|front" />
+	<?php } elseif (is_category()) { //for category pages ?>
+	<meta name="t_omni_pagename" content="st|localnews|todayfile|category|front" />
 	<meta name="t_omni_site" content="st" />
 	<meta name="t_omni_pagetype" content="front" />
-	<meta name="t_omni_contenttitle" content="Local Blog" />
-	<meta name="t_omni_path" content="st|localnews|localblog" />
+	<meta name="t_omni_contenttitle" content="Category archive: <?php single_cat_title (''); ?> - The Today File - The Seattle Times" />
+	<meta name="t_omni_path" content="st|localnews|todayfile|category" />
+	<?php } elseif (is_tag()) { //for tag pages ?>
+	<meta name="t_omni_pagename" content="st|localnews|todayfile|tag|front" />
+	<meta name="t_omni_site" content="st" />
+	<meta name="t_omni_pagetype" content="front" />
+	<meta name="t_omni_contenttitle" content="Tag archive: <?php single_tag_title(); ?>  - The Today File" />
+	<meta name="t_omni_path" content="st|localnews|todayfile|tag" />
+	<?php } elseif (is_author()) { //for author pages ?>
+	<meta name="t_omni_pagename" content="st|localnews|todayfile|author|front" />
+	<meta name="t_omni_site" content="st" />
+	<meta name="t_omni_pagetype" content="front" />
+	<meta name="t_omni_contenttitle" content="Author archive: <?php echo
+	$strTitle = trim(wp_title("",false));
+	?> - The Today File - The Seattle Times" />
+	<meta name="t_omni_path" content="st|localnews|todayfile|author" />
+	<?php } else { //for other pages ?>
+	<meta name="t_omni_pagename" content="st|localnews|todayfile|front" />
+	<meta name="t_omni_site" content="st" />
+	<meta name="t_omni_pagetype" content="front" />
+	<meta name="t_omni_contenttitle" content="The Today File - The Seattle Times" />
+	<meta name="t_omni_path" content="st|localnews|todayfile|category" />
 	<?php } ?>
 
 	<!-- start ad set-up -->
@@ -568,4 +595,5 @@
 		<!-- end nav include -->
 
 		<div id="content" class="clearfix">
-
+		
+		
