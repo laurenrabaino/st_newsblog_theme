@@ -1,5 +1,19 @@
 <?php
 
+// remove more link jump
+// http://codex.wordpress.org/Customizing_the_Read_More#Link_Jumps_to_More_or_Top_of_Page
+function remove_more_jump_link($link) { 
+$offset = strpos($link, '#more-');
+if ($offset) {
+$end = strpos($link, '"',$offset);
+}
+if ($end) {
+$link = substr_replace($link, '', $offset, $end-$offset);
+}
+return $link;
+}
+add_filter('the_content_more_link', 'remove_more_jump_link');
+
 // Theme support for custom menus
 if ( function_exists( 'wp_nav_menu' ) ){
 	if (function_exists('add_theme_support')) {

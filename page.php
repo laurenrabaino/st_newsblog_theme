@@ -3,7 +3,7 @@
 			<div id="leftcolumn" class="clearfix">
 			
 				<div id="blogNameMasthead">
-					<h2><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
+					<h2><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/images/today_file_header.jpg" alt="<?php bloginfo( 'name' ); ?>" /></a></h2>
 					<p class="tagline"><?php bloginfo( 'description' ); ?></p>
 					<div id="access" class="blogNav clearfix" role="navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'blog-nav' ) ); ?>

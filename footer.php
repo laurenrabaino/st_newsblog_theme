@@ -128,6 +128,13 @@
 	$('body').removeClass('js_disabled').addClass('js_enabled');
 </script>
 
+<!-- jQuery external link new window -->
+<script type="text/javascript">
+jQuery("#content a[href^='http:']").not("[href*='today.seattletimes.com']").attr('target','_blank'); 
+jQuery("#content a[href^='http://seattletimes.nwsource.com']").attr('target',''); 
+jQuery("#content a[href^='http://community.seattletimes.nwsource.com']").attr('target','');
+</script>
+
 <?php wp_footer(); ?>
 
 </body>

@@ -95,13 +95,13 @@
 	<meta name="t_omni_site" content="st" />
 	<meta name="t_omni_pagetype" content="front" />
 	<meta name="t_omni_contenttitle" content="Category archive: <?php single_cat_title (''); ?> - The Today File - The Seattle Times" />
-	<meta name="t_omni_path" content="st|localnews|todayfile|category" />
+	<meta name="t_omni_path" content="st|localnews|todayfile" />
 	<?php } elseif (is_tag()) { //for tag pages ?>
 	<meta name="t_omni_pagename" content="st|localnews|todayfile|tag|front" />
 	<meta name="t_omni_site" content="st" />
 	<meta name="t_omni_pagetype" content="front" />
 	<meta name="t_omni_contenttitle" content="Tag archive: <?php single_tag_title(); ?>  - The Today File" />
-	<meta name="t_omni_path" content="st|localnews|todayfile|tag" />
+	<meta name="t_omni_path" content="st|localnews|todayfile|archive" />
 	<?php } elseif (is_author()) { //for author pages ?>
 	<meta name="t_omni_pagename" content="st|localnews|todayfile|author|front" />
 	<meta name="t_omni_site" content="st" />
@@ -109,7 +109,7 @@
 	<meta name="t_omni_contenttitle" content="Author archive: <?php echo
 	$strTitle = trim(wp_title("",false));
 	?> - The Today File - The Seattle Times" />
-	<meta name="t_omni_path" content="st|localnews|todayfile|author" />
+	<meta name="t_omni_path" content="st|localnews|todayfile|archive" />
 	<?php } else { //for other pages ?>
 	<meta name="t_omni_pagename" content="st|localnews|todayfile|front" />
 	<meta name="t_omni_site" content="st" />
