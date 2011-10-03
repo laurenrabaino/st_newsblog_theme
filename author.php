@@ -25,11 +25,11 @@
 				<div class="hentry">
 
 					<h5 class="hed6"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
-					<p class="entry-meta">Posted by <?php the_author(''); ?> on <?php the_time('F j, Y') ?> at <?php the_time('g:i A'); ?></p>
+					<p class="entry-meta">Posted by <?php the_author_posts_link() ?> on <?php the_time('F j, Y') ?> at <?php the_time('g:i A'); ?></p>
 
 					<?php the_content(); ?>
 
-					<p class="entry-utility"><?php the_time('F j, Y'); ?> at <?php the_time('g:i a'); ?> | <?php exclude_post_categories('1',', '); ?><!-- | <?php comments_number('0 comments', '1 comment', '% comments'); ?> --></p>
+					<p class="entry-utility"><span class="comments-link"><a href="<?php the_permalink() ?>#comments" class="commentCount"><?php fb_comment_count() ?> comments</a></span> | Posted in <?php exclude_post_categories('1',', '); ?></p>
 
 				</div>
 
